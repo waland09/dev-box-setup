@@ -1,0 +1,8 @@
+Virtual Box / Ubuntu Dev VM Setup
+
+- using these instructions:  https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview
+
+- download Virtual Box from https://www.virtualbox.org/wiki/Downloads (I'm using 7.0.4)
+	- install (no options to select, just click through)
+
+- download Ubuntu image (using 22.04.1 LTS) https://ubuntu.com/download/desktop
