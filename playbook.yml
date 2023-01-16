@@ -1,0 +1,23 @@
+- name: "use localhost"
+  hosts: localhost
+  become: yes
+  connection: local
+  tasks:
+
+  - name: "download intellij tar.gz"
+    ansible.builtin.get_url:
+      url: https://download.jetbrains.com/idea/ideaIU-2022.3.1.tar.gz
+      dest: /opt
+      
+  - name: "unarchive intellij tar.gz"
+    ansible.builtin.unarchive:
+      src: /opt/ideaIU-2022.3.1.tar.gz
+      dest: /opt
+
+  - name: "remove intellij tar.gz"
+    ansible.builtin.file:
+      path: /opt/ideaIU-2022.3.1.tar.gz
+      state: absent
+
+  - debug: var=output.stdout_lines
+
