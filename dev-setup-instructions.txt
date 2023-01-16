@@ -1,0 +1,33 @@
+- first create VM, following instructions in virtual-box-ubuntu-setup.txt
+
+- once in your new VM, add your user to sudoers:
+
+visudo /etc/sudoers
+add this below admin line
+<username> ALL=(ALL) ALL
+
+run the following commands to install ansible:
+
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible
+
+- install git
+
+sudo apt-get install git-all
+
+- generate ssh key
+
+create /home/<username>/.ssh/ folder, cd to there
+
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+- add ssh public key to github
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+
+- pull dev setup repo, recommended under /home/<username>
+
+git clone git@github.com:waland09/dev-box-setup.git
+
